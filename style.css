@@ -1,0 +1,138 @@
+body{
+    background-color:grey;
+    margin: 0;
+    padding: 0; 
+    font-family: 'Sriracha', cursive;
+    
+    
+}
+
+h1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+h2{ 
+    font-size:16px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.everything{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+.title{
+    background-color:white;
+    color: gray;
+}
+.author{
+    background-color:white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 32px;
+    color: gray;
+}
+
+.info{background-color: white;
+    font-size: 16px;
+    color: gray;
+}
+.g1{grid-column-start: 2;
+color:white;}
+.g2{grid-column-start: 2;
+color: white;}
+
+.g3{grid-column-start: 2;
+color: white;}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+   
+    body {
+        background-color:black;
+        color: white;
+    }
+
+    h1{
+        
+        color: black;
+    }
+  
+    .everything{
+        
+        color: white;
+        display: grid;
+        width: 170vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto auto auto auto;
+    }
+    .author{grid-row-start:2 ;
+        grid-column-start: 2;
+        background-color: black
+    }
+    .title{
+        grid-column: 1/-1;
+    }
+    .info{grid-column-start:4 ;
+        grid-row-start: 5;
+    background-color: black;
+    }
+
+    .g1{
+        grid-column-start: 1;
+    grid-row-start: 2;
+   
+    }
+
+    .g3{grid-row-start: 4;
+    grid-column-start: 3;
+    color: white;
+    }
+    .g2{grid-row-start: 3;
+        grid-column-start: 2;
+    color: white;
+    }
+        
+
+
+    /* .info{grid-column-start: 4;
+grid-column-end: 5;
+    grid-row-start: 4;
+    }    */
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color:white;
+    }    
+    h1{background-color: black;
+        color: white;
+    }
+    .everything{
+        
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        
+    }
+    .title{
+        grid-column: 1/-1;
+    }
+
+    .author{
+        width: auto;
+        height: 10vw;
+        position: absolute;
+        top: 253px;
+        left: -169px;
+        transform-origin: center;
+        transform: rotate(-90deg);
+    }
+    .info{grid-row-start: 5;
+    grid-column-start: 2;
+    }
+}
